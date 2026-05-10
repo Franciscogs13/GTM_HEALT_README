@@ -35,7 +35,7 @@ A aplicação implementa o protocolo **PKCE (Proof Key for Code Exchange)**. Ess
 
 ---
 
-### 🛠️ Configuração da Infraestrutura (GCP)
+### 4. Configuração da Infraestrutura (GCP)
 
 Para garantir a viabilidade e segurança da aplicação, foi estruturado um ambiente no **Google Cloud Console** seguindo as diretrizes de governança de dados:
 
