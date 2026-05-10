@@ -35,7 +35,17 @@ A aplicação implementa o protocolo **PKCE (Proof Key for Code Exchange)**. Ess
 
 ---
 
-## 4. Governança e Segurança da Informação
+### 🛠️ Configuração da Infraestrutura (GCP)
+
+Para garantir a viabilidade e segurança da aplicação, foi estruturado um ambiente no **Google Cloud Console** seguindo as diretrizes de governança de dados:
+
+* **Habilitação de APIs:** Ativação da *Google Tag Manager API v2* para permitir o consumo programático dos metadados dos contêineres.
+* **Configuração de Consentimento:** Estruturação da tela de OAuth focada no escopo `tagmanager.readonly`. Isso garante o **Princípio do Privilégio Mínimo**, assegurando que a aplicação tenha acesso apenas à leitura das configurações, sem permissões de escrita ou alteração nos ambientes dos clientes.
+* **Gestão de Credenciais:** Configuração de IDs de cliente OAuth específicos para ambiente Web (Streamlit Cloud), com gerenciamento rigoroso de **URIs de redirecionamento** para prevenir vulnerabilidades de segurança e garantir que o token retorne apenas para o domínio oficial da aplicação.
+
+---
+
+## 5. Governança e Segurança da Informação
 
 A aplicação foi desenhada sob o princípio de **Zero-Trust Storage**:
 1.  **Sem Hardcoding:** Nenhuma ID de cliente ou conta é fixada no código.
